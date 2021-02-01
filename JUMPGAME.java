@@ -15,8 +15,8 @@ public class JUMPGAME {
         ret = cache[y][x];
         if(ret != -1) return ret;
         
-        int jumpSize = board[y][x];
-        return ret = jump(y+jumpSize, x) | jump(y, x+jumpSize);
+        int jumpNum = board[y][x];
+        return ret = jump(y+jumpNum, x) | jump(y, x+jumpNum);
     }
     
     
