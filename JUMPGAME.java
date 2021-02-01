@@ -7,16 +7,16 @@ public class JUMPGAME {
     static int cache [][] = new int[100][100];
     static int ret = 0;
     
-    public static int jump(int x, int y){
-        if(x >= n || y >= n) return 0; 
+    public static int jump(int y, int x){
+        if(y >= n || x >= n) return 0;
         
-        if(x==n-1 && y==n-1) return 1;
+        if(y==n-1 && x==n-1) return 1;
         
-        ret = cache[x][y];
+        ret = cache[y][x];
         if(ret != -1) return ret;
         
-        int jumpSize = board[x][y];
-        return ret = jump(x+jumpSize, y) | jump(x, y+jumpSize);
+        int jumpSize = board[y][x];
+        return ret = jump(y+jumpSize, x) | jump(y, x+jumpSize);
     }
     
     
