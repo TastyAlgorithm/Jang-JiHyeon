@@ -10,7 +10,7 @@ public class B2606 {
 
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-		int l = sc.nextInt(); // 쌍
+		int l = sc.nextInt();
 
 		check = new boolean[n + 1]; 
 		list = (ArrayList<Integer>[]) new ArrayList[n + 1];
